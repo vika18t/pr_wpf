@@ -14,8 +14,13 @@
 		</Grid.RowDefinitions>
 
 		<TextBlock Text="Учёт студентов" FontSize="27" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" Foreground="RoyalBlue"/>
-
-		<DataGrid x:Name="StudGrid" Grid.Row="1" AutoGenerateColumns="True" IsReadOnly="True" SelectionMode="Single" Margin="0,0,0,10"/>
+		<DataGrid x:Name="StudGrid" Grid.Row="1" 
+                  AutoGenerateColumns="True" 
+                  IsReadOnly="True" 
+                  SelectionMode="Single" 
+                  Margin="0,0,0,10"
+                  RowHeight="30"
+                  ColumnWidth="*"/>
 
 		<StackPanel Grid.Row="2" Orientation="Horizontal"
                     HorizontalAlignment="Center">
