@@ -46,14 +46,14 @@ namespace pr_wpf
 
 		private void DeleteButton_Click(object sender, RoutedEventArgs e)
 		{
-			// 1. Проверяем, выбран ли студент
+			
 			if (StudGrid.SelectedItem is Student selectedStudent)
 			{
-				// 2. Если выбран, задаем вопрос
+			
 				MessageBoxResult result = MessageBox.Show($"Вы уверены, что хотите удалить студента {selectedStudent.Name}?",
 						"Подтверждение удаления", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-				// 3. Если ответ "Да" - удаляем
+				
 				if (result == MessageBoxResult.Yes)
 				{
 					students.Remove(selectedStudent);
@@ -61,7 +61,7 @@ namespace pr_wpf
 			}
 			else
 			{
-				// 4. Если студент не выбран (сработает, если первый if выдал false)
+				
 				MessageBox.Show("Выберите студента для удаления.");
 			}
 		}
@@ -70,8 +70,8 @@ namespace pr_wpf
 		{
 			var options = new JsonSerializerOptions
 			{
-				WriteIndented = true, // Красивый формат с отступами
-				Encoder = JavaScriptEncoder.Create(UnicodeRanges.All) // Сохраняет кириллицу как есть (без \u0410)
+				WriteIndented = true, 
+				Encoder = JavaScriptEncoder.Create(UnicodeRanges.All) 
 			};
 
 			string json = JsonSerializer.Serialize(students, options);
