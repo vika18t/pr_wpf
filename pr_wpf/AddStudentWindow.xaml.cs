@@ -43,7 +43,7 @@ namespace pr_wpf
 
 			if (!double.TryParse(GradeBox.Text.Replace('.', ','), out double grade))
 			{
-				MessageBox.Show("Балл должен быть числом (например, 4.8)!");
+				MessageBox.Show("Балл должен быть числом");
 				return;
 			}
 
